@@ -22,11 +22,11 @@ Send Cloud Foundry Application Metrics, Logs and Traces to Datadog!
       pip install --upgrade tile-generator
       ```
 
-- Create a new [Datadog Cloud Foundry Buildpack](https://github.com/DataDog/datadog-cloudfoundry-buildpack/releases) release.
+- [Build the Datadog Cloud Foundry Buildpack](https://github.com/DataDog/datadog-cloudfoundry-buildpack#building) or download it from the [releases](https://github.com/DataDog/datadog-cloudfoundry-buildpack/releases) page on github.
 
 ## Build
 
-- Download the latest `datadog-cloudfoundry-buildpack.zip` [release](https://github.com/DataDog/datadog-cloudfoundry-buildpack/releases) into the `tile/resources` folder.
+- Place the `datadog-cloudfoundry-buildpack.zip` file into the `tile/resources` folder.
 
 - Create the tile by specifying the version. Look at the [tile-history.yml](tile/tile-history.yml) for the latest version that was built.
     ```bash

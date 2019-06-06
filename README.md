@@ -29,8 +29,8 @@ Send Cloud Foundry Application Metrics, Logs and Traces to Datadog!
 - Download the latest `datadog-cloudfoundry-buildpack.zip` [release](https://github.com/DataDog/datadog-cloudfoundry-buildpack/releases) into the `tile/resources` folder.
 
 - Create the tile by specifying the version. Look at the [tile-history.yml](tile/tile-history.yml) for the latest version that was built.
-```bash
-tile build <TILE_VERSION>
-```
+    ```bash
+    tile build <TILE_VERSION>
+    ```
 
 The tile (`datadog-application-monitoring-*.*.*.pivotal` file) is available in the `tile/product` folder, and `tile/tile-history.yml` has been automatically updated.

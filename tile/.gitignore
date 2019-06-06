@@ -1,3 +1,5 @@
 product/
 release/
 venv/
+# do not save the completed zip files
+*.zip

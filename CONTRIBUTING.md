@@ -62,7 +62,7 @@ working on for a day.
 
 ### Releasing
 
-The release procedure is managed by Datadog.
+The release procedure is managed by Datadog, instructions can be found in the [RELEASING](/RELEASING.md) document.
 
 ## Asking a questions
 
@@ -101,8 +101,6 @@ This section lists the labels we use to help us track and manage issues and pull
 | `severity/normal`             | Issue Only               | Normal severity issue.
 | `stale`                       | Issues and Pull Requests | Stale - Bot reminder.
 | `stale/exempt`                | Issues and Pull Requests | Exempt from being marked as stale.
-
-
 
 [1]: https://github.com/DataDog/datadog-application-monitoring-pivotal-tile/issues
 [2]: https://github.com/DataDog/datadog-application-monitoring-pivotal-tile/issues/new

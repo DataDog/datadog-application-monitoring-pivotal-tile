@@ -1,7 +1,7 @@
 ---
 name: datadog-application-monitoring
 icon_file: resources/icon.png
-label: Datadog Application Monitoring for PCF
+label: Datadog Application Monitoring for Pivotal Platform
 description: Send Cloud Foundry Application Metrics, Logs and Traces to Datadog!
 
 apply_open_security_group: false

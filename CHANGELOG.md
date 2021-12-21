@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.27.0 / 2021-12-21
+
+* [Added] Bump Datadog buildpack to version 4.28.0. See [here](https://github.com/DataDog/datadog-cloudfoundry-buildpack/releases/tag/4.28.0) for details.
+
 ## 1.26.0 / 2021-12-13
 
 * [Added] Bump Datadog buildpack to version 4.27.0. See [here](https://github.com/DataDog/datadog-cloudfoundry-buildpack/releases/tag/4.27.0) for details.

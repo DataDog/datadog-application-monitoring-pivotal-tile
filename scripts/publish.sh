@@ -7,16 +7,18 @@ function setup() {
 
     # download pivnet-cli
     curl -L "https://github.com/pivotal-cf/pivnet-cli/releases/download/v3.0.1/pivnet-linux-amd64-3.0.1" -o ./pivnet
+    chmod +x ./pivnet
+
     ./pivnet login --api-token=$PIVNET_TOKEN
 
     # refresh token can be obtained from the Tanzu profile under UAA API Token
-    ACCESS_TOKEN=$(curl -X POST https://network.tanzu.vmware.com/api/v2/authentication/access_tokens -d "{\"refresh_token\": \"$PIVNET_TOKEN\"}" | jq -r .access_token)
+    ACCESS_TOKEN=$(curl -X POST https://network.tanzu.vmware.com/api/v2/authentication/access_tokens -d '{"refresh_token": "'"$PIVNET_TOKEN"'"}' | jq -r .access_token)
 }
 
 function setup_product_token() {
     echo "--- setting up federation token for $PRODUCT_SLUG"
     # setup aws bucket access
-    JSON_AWS_RESPONSE=$(curl -X POST https://network.pivotal.io/api/v2/federation_token -H "Authorization: Bearer $ACCESS_TOKEN" -d "{\"product_id\":\"$PRODUCT_SLUG\"}")
+    JSON_AWS_RESPONSE=$(curl -X POST https://network.pivotal.io/api/v2/federation_token -H "Authorization: Bearer $ACCESS_TOKEN" -d '{"product_id":"'"$PRODUCT_SLUG"'"}')
     export AWS_ACCESS_KEY_ID=$(echo $JSON_AWS_RESPONSE | jq -r .access_key_id)
     export AWS_SECRET_ACCESS_KEY=$(echo $JSON_AWS_RESPONSE | jq -r .secret_access_key)
     export AWS_BUCKET=$(echo $JSON_AWS_RESPONSE | jq -r .bucket)
@@ -54,17 +56,20 @@ function publish_monit_tile() {
 
     # upload .pivotal file
     export PRODUCT_SLUG="datadog-application-monitoring"
-    export FILE_NAME="$PRODUCT_SLUG-$MONIT_TILE_VERSION"
+    export FILE_NAME="$PRODUCT_SLUG-$VERSION"
     export FILE_TYPE="Software"
-    export FILE_VERSION=$MONIT_TILE_VERSION
+    export FILE_VERSION=$VERSION
     export FILE_NAME_EXT=$FILE_NAME.pivotal
-    export FILE_PATH=$MONIT_TILE_DIR/tile/product/$FILE_NAME_EXT
+    export FILE_PATH=tile/product/$FILE_NAME_EXT
 
     setup_product_token
     upload_product_file
 }
 
 function main() {
+    LATEST_VERSION=$(tail -n1 tile/tile-history.yml | awk '{print $2}')
+    VERSION=${VERSION:-$LATEST_VERSION}
+
     setup
     publish_monit_tile
 }

@@ -4,9 +4,6 @@ set -e
 
 RELEASE_TYPE=${RELEASE_TYPE:-"minor"}
 
-# prepare resources
-./scripts/prepare.sh
-
 cd tile/
 
 # get next semversion
@@ -31,12 +28,7 @@ else
     exit 1
 fi
 
-VERSION="$major.$minor.$patch"
-
-# install dependency
-curl -L "https://github.com/cf-platform-eng/tile-generator/releases/download/v14.0.5/tile_linux-64bit" -o tile_linux-64bit
-chmod +x tile_linux-64bit
-mv tile_linux-64bit /usr/local/bin/tile
+VERSION=${VERSION:-"$major.$minor.$patch"}
 
 # build product file
 tile build $VERSION

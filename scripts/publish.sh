@@ -67,6 +67,9 @@ function publish_monit_tile() {
 }
 
 function main() {
+    ./scripts/prepare.sh
+    ./scripts/release.sh
+
     LATEST_VERSION=$(tail -n1 tile/tile-history.yml | awk '{print $2}')
     VERSION=${VERSION:-$LATEST_VERSION}
 

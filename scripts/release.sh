@@ -8,7 +8,7 @@ cd tile/
 
 # get next semversion
 LATEST_VERSION=$(tail -n1 tile-history.yml | awk '{print $2}')
-SPLIT_VERSION=(${LATEST_VERSION//./ })
+SPLIT_VERSION=${LATEST_VERSION//./ }
 
 major=${SPLIT_VERSION[0]}
 minor=${SPLIT_VERSION[1]}
@@ -29,6 +29,11 @@ else
 fi
 
 VERSION=${VERSION:-"$major.$minor.$patch"}
+
+# install tile-generator
+curl -L "https://github.com/cf-platform-eng/tile-generator/releases/download/v14.0.5/tile_linux-64bit" -o tile_linux-64bit
+chmod +x tile_linux-64bit
+mv tile_linux-64bit /usr/local/bin/tile
 
 # build product file
 tile build $VERSION

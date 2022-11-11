@@ -7,6 +7,11 @@ description: Send application metrics, logs and traces to Datadog!
 apply_open_security_group: false
 
 stemcell_criteria:
+  os: ubuntu-jammy
+  requires_cpi: false
+  version: '1.8'
+
+additional_stemcell_criteria:
   os: ubuntu-xenial
   requires_cpi: false
   version: '621'

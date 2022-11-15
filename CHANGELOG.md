@@ -1,8 +1,12 @@
 # Changelog
 
-## 1.32.0 / 2022-08-03
+## 1.33.0 / 2022-11-15
 
 * [Added] Bump Datadog buildpack to version 4.34.0. See [here](https://github.com/DataDog/datadog-cloudfoundry-buildpack/releases/tag/4.34.0) for details.
+* [Added] Add support for ubuntu-jammy stemcell. See [#37](https://github.com/DataDog/datadog-application-monitoring-pivotal-tile/pull/37).
+
+## 1.32.0 / 2022-08-03
+
 * [Added] Bump Datadog buildpack to version 4.33.0. See [here](https://github.com/DataDog/datadog-cloudfoundry-buildpack/releases/tag/4.33.0) for details.
 
 ## 1.31.0 / 2022-06-09

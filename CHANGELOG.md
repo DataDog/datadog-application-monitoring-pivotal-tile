@@ -1,8 +1,8 @@
 # Changelog
 
-## 1.34.0 / 2023-01-06
+## 1.34.0 / 2023-01-26
 
-* [Added] Bump Datadog buildpack to version 4.35.0. See [here](https://github.com/DataDog/datadog-cloudfoundry-buildpack/releases/tag/4.35.0) for details.
+* [Added] Bump Datadog buildpack to version 4.35.1. See [here](https://github.com/DataDog/datadog-cloudfoundry-buildpack/releases/tag/4.35.1) for details.
 * [Changed] Use `ubuntu-xenial` stemcells. See [#39](https://github.com/DataDog/datadog-application-monitoring-pivotal-tile/pull/39).
 
 ## 1.33.0 / 2022-11-15

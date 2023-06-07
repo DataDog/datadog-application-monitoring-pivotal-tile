@@ -26,11 +26,8 @@ Configuration file for the Datadog Application Monitoring tile for Pivotal Platf
 
 ## Build
 
-- Place the `datadog-cloudfoundry-buildpack.zip` file into the `tile/resources` folder.
+- Update `BUILDPACK_VERSION` under `./scripts/prepare.sh`, then run the script to download the desired buildpack.
 
-- Create the tile by specifying the version. Look at the [tile-history.yml](tile/tile-history.yml) for the latest version that was built.
-    ```bash
-    tile build <TILE_VERSION>
-    ```
+- Run the build script and pass the desired tile version as follows `VERSION=<TILE_VERSION> ./scripts/build.sh`.
 
 The tile (`datadog-application-monitoring-*.*.*.pivotal` file) is available in the `tile/product` folder, and `tile/tile-history.yml` has been automatically updated.

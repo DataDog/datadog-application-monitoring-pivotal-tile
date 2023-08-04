@@ -11,7 +11,7 @@ fi
 
 RESOURCES_DIR="tile/resources"
 
-BUILDPACK_VERSION=4.35.1
+BUILDPACK_VERSION=4.36.0
 
 major=$(echo $BUILDPACK_VERSION | cut -d. -f1)
 minor=$(echo $BUILDPACK_VERSION | cut -d. -f2)

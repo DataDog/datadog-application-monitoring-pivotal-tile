@@ -4,7 +4,7 @@
 * [Added] Upgrade tile to `ubuntu-jammy` stemcells. See [#49](https://github.com/DataDog/datadog-application-monitoring-pivotal-tile/pull/49).
 * [Added] Bump Datadog buildpack to version 4.36.0. See [#47](https://github.com/DataDog/datadog-application-monitoring-pivotal-tile/pull/47).
 
-_Note: the embedded Datadog buildpack only supports the `cflinuxfs3` and `cflinuxfs4-compat` stacks for now._
+_Note: the embedded Datadog buildpack only supports the `cflinuxfs3` and `cflinuxfs4-compat` stacks._
 
 ## 1.34.0 / 2023-01-26
 

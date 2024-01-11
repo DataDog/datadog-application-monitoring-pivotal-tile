@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.38.0 / 2024-01-09
+
+* [Added] Add `bpm-release`. See [#53](https://github.com/DataDog/datadog-application-monitoring-pivotal-tile/pull/53).
+
 ## 1.37.0 / 2023-11-16
 
 * [Added] Bump Datadog buildpack to version 4.38.0. See [here](https://github.com/DataDog/datadog-cloudfoundry-buildpack/releases/tag/4.38.0) for details.

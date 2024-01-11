@@ -11,7 +11,7 @@ fi
 
 RESOURCES_DIR="tile/resources"
 
-BUILDPACK_VERSION=4.36.0
+BUILDPACK_VERSION=4.38.0
 BPM_VERSION=1.2.7
 
 BUILDPACK_NAME=datadog-cloudfoundry-buildpack-$BUILDPACK_VERSION.zip

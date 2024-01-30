@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.39.0 / 2024-01-30
+
+* [Removed] Remove `bpm-release`. See [#55](https://github.com/DataDog/datadog-application-monitoring-pivotal-tile/pull/55).
+
 ## 1.38.0 / 2024-01-09
 
 * [Added] Add `bpm-release`. See [#53](https://github.com/DataDog/datadog-application-monitoring-pivotal-tile/pull/53).

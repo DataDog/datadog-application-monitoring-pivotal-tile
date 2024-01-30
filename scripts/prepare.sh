@@ -15,4 +15,4 @@ BUILDPACK_VERSION=4.38.0
 BUILDPACK_NAME=datadog-cloudfoundry-buildpack-$BUILDPACK_VERSION.zip
 
 echo "download $BUILDPACK_NAME"
-curl -L "https://github.com/DataDog/datadog-cloudfoundry-buildpack/releases/download/$BUILDPACK_VERSION/$BUILDPACK_NAME" -o $RESOURCES_DIR/datadog-cloudfoundry-buildpack.zip
+curl -L "https://cloudfoundry.datadoghq.com/datadog-cloudfoundry-buildpack/$BUILDPACK_NAME" -o $RESOURCES_DIR/datadog-cloudfoundry-buildpack.zip

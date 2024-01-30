@@ -16,21 +16,3 @@ packages:
   type: buildpack
   path: resources/datadog-cloudfoundry-buildpack.zip
   buildpack_order: 99
-- name: bpm
-  type: bosh-release
-  path: resources/bpm-release.tgz
-
-runtime_configs:
-- name: datadog-application-monitoring
-  runtime_config:
-    releases:
-    - name: bpm
-      version: "1.2.7"
-    addons:
-    - name: datadog-application-monitoring-bpm
-      include:
-        deployments:
-          - (( ..datadog-application-monitoring.deployment_name ))
-      jobs:
-      - name: bpm
-        release: bpm

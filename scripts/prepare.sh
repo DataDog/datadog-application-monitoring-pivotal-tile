@@ -11,7 +11,7 @@ fi
 
 RESOURCES_DIR="tile/resources"
 
-BUILDPACK_VERSION=4.40.0
+BUILDPACK_VERSION=4.41.0
 BUILDPACK_NAME=datadog-cloudfoundry-buildpack-$BUILDPACK_VERSION.zip
 
 echo "download $BUILDPACK_NAME"

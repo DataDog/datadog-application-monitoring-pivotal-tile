@@ -1,6 +1,6 @@
 # Changelog
 
-## 1.40.0 / 2024-06-06
+## 1.40.0 / 2024-11-19
 
 * [Added] Bump Datadog buildpack to version 4.41.0. See [here](https://github.com/DataDog/datadog-cloudfoundry-buildpack/releases/tag/4.41.0) for details.
 

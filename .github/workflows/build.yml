@@ -1,0 +1,59 @@
+name: Validate
+
+on:
+  push:
+    branches:
+      - master
+      - main
+  pull_request:
+    branches:
+      - master
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@08eba0b27e820071cde6df949e0beb9ba4906955 # v4
+
+      - name: Install Python
+        uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # v5
+        with:
+          python-version: '3.10'
+
+      - name: Install tile-generator
+        run: |
+          pip install --upgrade pip
+          pip install tile-generator==15.0.2
+
+      - name: Verify tile-generator installation
+        run: tile --version
+
+      - name: Install BOSH CLI
+        run: |
+          wget -q https://github.com/cloudfoundry/bosh-cli/releases/download/v7.5.6/bosh-cli-7.5.6-linux-amd64
+          chmod +x bosh-cli-7.5.6-linux-amd64
+          sudo mv bosh-cli-7.5.6-linux-amd64 /usr/local/bin/bosh
+
+      - name: Verify BOSH CLI installation
+        run: bosh --version
+
+      - name: Run prepare script
+        run: ./scripts/prepare.sh
+
+      - name: Run tile build
+        env:
+          VERSION: 0.0.0-ci-test
+        run: |
+          cd tile/
+          tile build $VERSION
+
+      - name: Verify build artifact
+        run: |
+          if [ ! -f tile/product/*.pivotal ]; then
+            echo "Build artifact not found!"
+            exit 1
+          fi
+          echo "Build successful!"
+          ls -lh tile/product/*.pivotal

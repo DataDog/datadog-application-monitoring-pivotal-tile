@@ -2,7 +2,8 @@
 
 ## 1.45.0 / 2026-03-17
 
-* [Changed] Replace invalid team platform-integrations with agent-integrations in CODEOWNERS. See [#67](https://github.com/DataDog/datadog-application-monitoring-pivotal-tile/pull/67).
+* [Added] Bump Datadog buildpack to version 4.47.0. See [here](https://github.com/DataDog/datadog-cloudfoundry-buildpack/releases/tag/4.47.0) for details.
+
 ## 1.44.0 / 2025-11-19
 
 * [Added] Bump Datadog buildpack to version 4.46.0. See [here](https://github.com/DataDog/datadog-cloudfoundry-buildpack/releases/tag/4.46.0) for details.

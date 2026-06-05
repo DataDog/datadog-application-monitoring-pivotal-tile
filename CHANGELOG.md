@@ -1,5 +1,8 @@
 # Changelog
 
+## 1.47.0 / 2026-06-05
+
+* [Changed] [Security] Pin GitHub Actions to a full-length commit SHA. See [#68](https://github.com/DataDog/datadog-application-monitoring-pivotal-tile/pull/68).
 ## 1.45.0 / 2026-03-17
 
 * [Added] Bump Datadog buildpack to version 4.47.0. See [here](https://github.com/DataDog/datadog-cloudfoundry-buildpack/releases/tag/4.47.0) for details.
